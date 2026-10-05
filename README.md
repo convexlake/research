@@ -17,5 +17,12 @@ Research notebooks built on Convex Lake's own historical market data.
   initially ran backwards because of dead default quotes — corrected at the row level, which
   then exposes a second, unexplained quoting artifact confirmed across 665,000+ rows.
 
+- **`polymarket_weather_calibration_by_city.ipynb`** — Full census of Polymarket's weather
+  markets, by city. Finds Atlanta calibrates best and Seoul worst, with London and New York
+  (the two highest-volume cities by far) sitting in the middle of the pack — sample size
+  doesn't predict calibration (r = 0.28, not significant). A multi-checkpoint breakdown shows
+  every city sharpens toward resolution and converges to a tight band by 90% of a market's
+  lifetime, regardless of its mid-life ranking.
+
 Data used by these notebooks comes from Convex Lake's own API — see
 [the API docs](https://convexlake.com/docs) for current coverage.
