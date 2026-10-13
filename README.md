@@ -24,5 +24,14 @@ Research notebooks built on Convex Lake's own historical market data.
   every city sharpens toward resolution and converges to a tight band by 90% of a market's
   lifetime, regardless of its mid-life ranking.
 
+- **`copytrading_slippage_simulation.ipynb`** — Can you copytrade a profitable
+  prediction-market account? Real accounts, real trades, real millisecond-resolution order
+  books on Predict.fun and Limitless, with a round-trip latency model grounded in each
+  venue's actual settlement architecture (off-chain matching vs. on-chain Base
+  confirmation). Reconstructs real equity curves: a directional strategy survives
+  copytrading with a ~5% haircut; a thin-margin arbitrage strategy goes from a real
+  +$45,492 profit to a loss on the identical trades, because its edge is smaller than the
+  tail risk a realistic delay exposes it to.
+
 Data used by these notebooks comes from Convex Lake's own API — see
 [the API docs](https://convexlake.com/docs) for current coverage.
