@@ -33,5 +33,13 @@ Research notebooks built on Convex Lake's own historical market data.
   +$45,492 profit to a loss on the identical trades, because its edge is smaller than the
   tail risk a realistic delay exposes it to.
 
+- **`kalshi_implied_distribution.ipynb`** — Reconstructing Kalshi's implied BTC probability
+  distribution from a single hour's 186-strike ladder. Finds 91.4% of strikes sit at the
+  exchange's minimum-tick default, not a real quote; filtering to the 13 genuinely live
+  strikes turns an uninterpretable spiky scatter into a clean, single-peaked density curve
+  — evidence that Kalshi's narrow strike buckets behave like a probability density, not a
+  cumulative distribution, and that a peak-finding read is more robust than a 0.5-crossing
+  median for this contract structure.
+
 Data used by these notebooks comes from Convex Lake's own API — see
 [the API docs](https://convexlake.com/docs) for current coverage.
