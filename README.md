@@ -41,5 +41,14 @@ Research notebooks built on Convex Lake's own historical market data.
   cumulative distribution, and that a peak-finding read is more robust than a 0.5-crossing
   median for this contract structure.
 
+- **`avellaneda-stoikov-perpetuals-example.ipynb`** — A worked implementation of the
+  Avellaneda & Stoikov (2008) optimal market-making model on BTCUSDT perpetuals across four
+  venues (Binance, OKX, Hyperliquid, Deribit) using ConvexLake L2 order-book data for
+  2026-11-04. Runs a full NautilusTrader backtest over a 4-hour window, then sweeps the two
+  key model parameters (risk-aversion γ and market-impact rate κ) across a 4×4 grid. Finds
+  that κ is the dominant lever — tighter spreads (κ = 0.5) reduce losses by ~19% vs the
+  default — and that the trending session explains all venues losing: the model's
+  mean-reversion assumption breaks down under sustained directional flow.
+
 Data used by these notebooks comes from Convex Lake's own API — see
 [the API docs](https://convexlake.com/docs) for current coverage.
